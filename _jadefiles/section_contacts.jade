@@ -1,0 +1,29 @@
+// Contact section start
+section.rtp_contact#rtp_s__contacts
+	.rtp_container
+		.rtp_row
+			.col.col--12-of-12.col--am
+				// section sub title
+				h2.rtp_section__title Contacts
+				p.rtp_sTitle Існує багато варіацій уривків з Lorem Ipsum, але більшість з них зазнала певних змін на кшталт жартівливих вставок!
+				.rtp_contact__content
+					// contact form start
+					.rtp_contact__form
+						form(method="post" id="contact_form")
+							.rtp_row
+								.col.col--1-of-2.rtp_form__group
+									input(type="text" placeholder="Name" name="name" id="first-name" class="form_input" required="required")
+								.col.col--1-of-2.rtp_form__group
+									input(type="text" placeholder="Email" name="email" id="email" class="form_input" required="required")
+								.col.col--12-of-12.rtp_form__group
+									textarea(rows="6" placeholder="Write your message" name="message" id="text_message" class="form_input" required="required")
+								.col.col--12-of-12.rtp_form__group
+									input(type="submit" value="Send Message" name="message" id="send_message" class="form_submit")
+					// contact form start
+					// social links
+					ul.rtp_social
+						li: a(href="#"): i.fa.fa-behance
+						li: a(href="#"): i.fa.fa-facebook
+						li: a(href="#"): i.fa.fa-youtube
+						li: a(href="#"): i.fa.fa-twitter
+// Contact section end

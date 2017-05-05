@@ -1,0 +1,281 @@
+// importing styles
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,600,700|Raleway:400,600,700|Capriola')
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+html, body
+	height: 100%
+
+body
+	font:
+		size: 14px
+		family: 'Open Sans', sans-serif
+	color: $black
+	background-color: #fafafa
+	line-height: 1.5
+	overflow-x: hidden
+
+
+/* SCROLL BAR STYLES */
+
+body::-webkit-scrollbar
+	width: 9px
+body::-webkit-scrollbar-thumb
+	background-color: $accent
+body::-webkit-scrollbar-track
+	background-color: transparentize($black, 0.2)
+
+body.boxed_layout::-webkit-scrollbar
+	width: 9px
+body.boxed_layout::-webkit-scrollbar-thumb
+	background-color: $white
+body.boxed_layout::-webkit-scrollbar-track
+	background-color: transparentize($black, 0.2)
+
+
+
+/* PAGE PRELOADER STYLES START */
+
+.rtp_preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: $black
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	z-index: 99999
+
+
+.spinner 
+ width: 200px
+ text-align: center
+
+
+.spinner > div 
+ width: 25px
+ height: 25px
+ background-color: $accent
+ border-radius: 100%
+ display: inline-block
+
+ animation: sk-bouncedelay 1.4s infinite ease-in-out both
+
+
+.spinner .bounce1 
+ animation-delay: -0.32s
+
+
+.spinner .bounce2 
+ animation-delay: -0.16s
+
+
+@keyframes sk-bouncedelay 
+ 0%, 80%, 100%  
+ 	transform: scale(0)
+ 40% 
+  transform: scale(1.0)
+  
+/* PAGE PRELOADER STYLES END */
+
+
+
+a 
+	text-decoration: none
+	color: #39cccc
+	display: inline-block
+	outline: none
+	transition: color 200ms ease-in-out
+	&:hover
+		color: $red
+		text-decoration: none
+
+img
+	max-width: 100%
+	height: auto
+	vertical-align: middle
+
+.space
+	height: 500px
+
+h1, h2, h3, h4
+	font-family: 'Capriola', sans-serif
+
+// general styles
+
+.rtp_container
+	max-width: 1050px
+	margin: 0 auto
+
+.rtp_sTitle
+	font:
+		size: 14px
+		weight: 600
+	text-align: center
+	color: transparentize($black, 0.5)
+	padding: 30px 0 20px
+	max-width: 600px
+	margin: 0 auto
+	line-height: 1.8em
+	letter-spacing: 1px
+
+.rtp_section__title
+	padding-bottom: 30px
+h2.rtp_section__title
+	font:
+		size: 24px
+		weight: 700
+	color: $black
+	text-transform: uppercase
+	margin: 0
+	&:hover
+		cursor: default
+
+.muted
+	color: $grey
+
+.posrel
+	position: relative
+
+.tar
+	text-align: right
+
+/* Social links */
+ul.rtp_social
+	list-style-type: none
+	display: flex 
+	align-items: center
+	li
+		a
+			height: 40px
+			width: 40px
+			line-height: 38px
+			text-align: center
+			background: $black
+			color: #fff
+			margin: 0 5px
+			font-size: 16px
+			border-radius: 50%
+			border: 1px solid $black
+			+transition(300ms, ease-in-out)
+			&:hover
+				background-color: $accent
+				color: $white
+				border: 1px solid $accent
+	
+/* Buttons */
+.rtp_btn
+	display: inline-block
+	padding: 0.9em 2.5em
+	color: $white
+	border-radius: 2px
+	text-transform: uppercase
+	margin: 40px 0 0
+	background-color: $accent
+	+transition(300ms, ease-in-out)
+	font:
+		size: 12px
+		weight: 700
+	&:hover
+		background-color: #FFF
+
+
+
+/* Flex */
+
+.rtp_flex
+	display: flex
+
+.rtp_flex__center
+	display: flex
+	justify-content: center
+	align-items: center
+
+.rtp_space__around
+	justify-content: space-around
+
+.rtp_space__between
+	justify-content: space-between
+
+.prev_arrow, .next_arrow
+	position: absolute
+	font-size: 56px
+	top: 50%
+	margin-top: -42px
+	z-index: 9
+	&:hover
+		cursor: pointer
+.prev_arrow
+	left: 5px
+.next_arrow
+	right: 5px
+
+
+.page_wrapper
+ +transition(all 400ms ease-in-out)
+
+.page_wrapper.show_off
+ +transition(all 400ms ease-in-out)
+	transform: translateX(970px)
+.page_wrapper.show_off_220
+ +transition(all 400ms ease-in-out)
+	transform: translateX(220px)
+
+.off_screen__content
+	position: fixed
+	top: 0
+	left: -970px
+	width: 750px
+	height: 100%
+	z-index: 9
+
+.off_screen__scroll
+	position: relative
+	overflow: hidden
+	height: 100%
+	width: 100%
+
+.off_scroll__content
+ border: none !important
+ box-sizing: content-box !important
+ height: auto
+ left: 0
+ margin: 0
+ max-height: none
+ max-width: none !important
+ overflow-y: scroll !important
+ padding: 0
+ position: relative !important
+ top: 0
+ width: auto !important
+
+.off_scroll__content
+	height: auto
+	max-height: 100vh
+
+.off_screen__scroll > .off_scroll__content::-webkit-scrollbar 
+ height: 5px
+ width: 9px
+
+.off_screen__scroll > .off_scroll__content::-webkit-scrollbar-thumb
+	background-color: transparentize($silver, 0.8)
+	border-radius: 15px
+	transition: background-color 300ms ease-in-out
+	&:hover
+		background-color: transparentize($silver, 0.3)
+
+.off_screen__scroll > .off_scroll__content::-webkit-scrollbar-track
+	background-color: transparentize($white, 0.2)
+
+.off-screen-content .scrollbar-inner > .scroll-element.scroll-y 
+ width: 4px
+ right: 10px
+ background-color: #000
+ height: calc(100% - 40px)
+ top: 20px
+

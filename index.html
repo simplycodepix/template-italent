@@ -1,0 +1,22 @@
+---
+layout: home
+title: Template for Italent
+---
+
+{% include section_preloader.html %}
+<div class="page_wrapper">
+	{% include header.html %}
+	{% include section_hero.html %}
+	<div class="off_screen__content">
+		<div class="off_screen__scroll">
+			<div class="off_scroll__content scrollbar-inner">
+			{% include section_about.html %}
+			{% include section_services.html %}
+			{% include section_works.html %}
+			{% include section_testimonails.html %}
+			{% include section_contacts.html %}
+			{% include section_footer.html %}
+			</div>
+		</div>
+	</div>
+</div>

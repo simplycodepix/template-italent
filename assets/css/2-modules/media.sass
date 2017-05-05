@@ -1,0 +1,199 @@
+/* max-width: 1170px */
+
+@media all and (max-width: 1170px)
+	.rtp_container
+		padding: 0 20px
+
+/* max-width: 1100px */
+
+@media all and (max-width: 1100px)
+	section.rtp_about
+		.col--ab
+			vertical-align: top
+
+
+/* max-width: 960px */
+
+
+@media all and (max-width: 960px)
+	.rtp_section__title
+		text-align: center
+	section.rtp_about
+		padding: 30px 0 20px
+		.rtp_about__content
+			text-align: center
+			ul.rtp_social
+				justify-content: center
+		.rtp_about__image
+			text-align: center
+			width: 300px
+			height: 300px
+			border-radius: 50%
+			overflow: hidden
+			margin: 0 auto
+			display: flex
+			align-items: center
+			img
+				width: 100%
+	section.rtp_services
+		padding: 40px 0 80px
+		.rtp_section__title
+			display: none
+	section.rtp_portfolio
+		.rtp_section__title
+			display: none
+		.rtp_portfolio__item a 
+			text-align: center
+			display: block
+		.rtp_portfolio__items .rtp_portfolio__item a.rtp_image__holder
+			max-height: 300px
+		nav.rtp_portfolio__nav
+			ul.rtp_portfolio__list
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-bottom: 40px
+				li 
+					margin: 0 10px
+					display: inline-block
+					font-size: 14px
+				li.mixitup-control-active
+					font-size: 16px
+	section.rtp_prices
+		padding: 80px 0 80px
+		.rtp_section__title
+			display: none
+
+@media all and (max-width: 960px)
+	header.rtp_header
+		.toggle_navbar
+			display: block
+			position: absolute
+			top: 0 
+			right: 5px
+			color: #fff
+			font-size: 21px
+			&:hover
+				cursor: pointer
+		&.rtp_header__bg
+			height: auto
+		nav.rtp_nav
+			background-color: $black
+			height: auto
+			opacity: 1
+			+transition(all 200ms ease-in-out)
+			overflow-y: auto
+			&.nav_closed
+				background-color: transparent
+				height: 1px
+				overflow: hidden
+				overflow-x: visible
+				opacity: 0
+				+transition(all 200ms ease-in-out)
+				ul.rtp_nav__list
+					border-top: 1px solid transparent
+			ul.rtp_nav__list
+				flex-flow: column
+				border-top: 1px solid $silver
+				justify-content: center
+				padding: 20px 0
+				li a
+					padding: 0
+					line-height: 50px
+					display: block
+
+
+
+/* Responsive boxed layout */
+@media all and (max-width: 1100px)
+	body.boxed_layout
+		.rtp_boxed__container
+			max-width: 1000px
+			padding: 0 20px
+		.rtp_section__title
+			position: static !important
+			text-align: center
+		section.rtp_services
+			.rtp_section__title
+				display: none
+		section.rtp_contact.rtp_box__panel
+			height: 600px
+
+@media all and (max-width: 960px)
+	body.boxed_layout
+		.rtp_box__panel
+			height: auto
+			margin-bottom: 100px
+		header.rtp_header
+			.toggle_navbar
+				color: $black
+			nav.rtp_nav
+				border-bottom: 1px solid $black
+				background-color: $white
+		section.rtp_hero__section
+			height: 100vh
+			padding-top: 55px
+			margin-top: 0
+		section.rtp_about
+			padding: 60px 30px 50px 30px
+			.rtp_about__image 
+				width: 250px
+				height: 250px
+				margin: 0 auto
+			.rtp_about__content
+				padding: 80px 0
+		section.rtp_services 
+			.rtp_service__single
+				padding: 20px 10px 30px
+				display: block
+				margin-bottom: 20px
+				.rtp_service__content
+					width: 100%
+					padding: 15px 0 0
+					text-align: center
+		section.rtp_portfolio.rtp_box__panel
+			height: auto
+			nav.rtp_portfolio__nav
+				height: auto
+				margin-bottom: 0
+				ul.rtp_portfolio__list
+					margin-bottom: 30px
+			.rtp_section__title
+				display: block
+				position: static
+				margin-bottom: 30px
+		section.rtp_testimonials
+			padding: 80px 20px 100px
+			.rtp_section__title
+				position: static
+		section.rtp_prices
+			padding: 45px 30px 60px 10px
+			.rtp_section__title
+				display: block
+		section.rtp_contact.rtp_box__panel
+			padding: 40px 40px 20px
+			height: auto
+			.rtp_section__title
+				position: static
+				padding: 0
+			.rtp_sTitle
+				margin: 30px 0 50px
+				padding: 0
+
+
+
+
+/* max-width: 768px */
+@media all and (max-width: 768px)
+	section.rtp_hero__section
+		.rtp_content__wrap
+			.rtp_hero__content
+				h1
+					font-size: 32px
+					margin: 25px 0 30px
+				p
+					font-size: 11px
+					max-width: 450px
+					margin: 0 auto
+				a.rtp_btn
+					font-size: 12px

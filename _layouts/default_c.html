@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/0-tools/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/0-tools/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/0-tools/slick.css">
+  <link rel="stylesheet" href="assets/css/0-tools/responsive-nav.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body>
+
+
+ {{ content }}
+
+<script>
+  function initMap() {
+    // Create a map object and specify the DOM element for display.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      scrollwheel: false,
+      zoom: 8
+    });
+    
+    // Create a marker and set its position.
+    var marker = new google.maps.Marker({
+      map: map,
+      position: {lat: -34.397, lng: 150.644},
+      title: 'Hello World!'
+    });
+  }
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv8GJKy0Q4KpJAHY6fs4s3M3Lsx4YU1Ok&callback=initMap"
+async defer></script>
+
+<!-- javascript scripts -->
+<script src="assets/js/jquery-1.12.0.min.js"></script>
+<script src="assets/js/mixitup.min.js"></script>
+<script src="assets/js/SmoothScroll.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
+
