@@ -1,13 +1,14 @@
 /* MAIN HEADER STYLES */
 
 header.rtp_header
-	background-color: $white
+	background-color: $header_bg
 	position: absolute
 	top: 0
 	left: -220px
 	width: 220px
 	height: 100%
 	z-index: 99
+	
 	+transition(200ms, ease-in-out)
 	.rtp_row
 		margin-left: 0
@@ -32,10 +33,10 @@ header.rtp_header
 		ul.rtp_nav__list
 			list-style-type: none
 			li a  
-				padding: 10px 0
+				padding: 15px 0
 				padding-left: 30px
 				text-transform: uppercase
-				color: $black
+				color: $header_color
 				transition: all 300ms ease-in-out
 				display: block
 				font:
@@ -43,9 +44,20 @@ header.rtp_header
 					weight: 600
 				&:hover, &.active
 					padding-left: 35px
-					background-color: transparentize($black, 0.95)
+					background-color: darken($header_bg, 5%)
 
+.home header.rtp_header.nav_opened
+	background-color: $white
+	box-shadow: -1px 0 4px rgba(0, 0, 0, 0.4)
+	nav.rtp_nav ul.rtp_nav__list li a 
+		color: $black
+		&:hover, &.active
+			background-color: transparentize($black, 0.95)
+	.rtp_header__trigger .off_show__screen.nav_opened
+		color: $black
 
+header.rtp_header.nav_opened
+	box-shadow: 1px 0 5px 1px rgba(0, 0, 0, 0.6)
 
 .rtp_header__trigger
 	position: relative
@@ -86,7 +98,7 @@ header.rtp_header
 			border-radius: 0
 			background-color: transparent
 			box-shadow: none
-			color: $black
+			color: $header_color
 			i.fa-times
 				visibility: visible 
 				opacity: 1
@@ -346,7 +358,8 @@ section.rtp_contact
 			&:focus
 				outline: none
 			&:hover
-				background-color: transparentize($accent, 0.2)
+				box-shadow: 1px 1px 2px darken($accent, 4%)
+				background-color: darken($accent, 2%)
 
 /* FOOTER SECTION STYLES */
 
@@ -640,9 +653,8 @@ section.rtp_contacts
 			border: none
 			margin-top: 0
 			transition: all 300ms ease-in-out
-			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 2px 1px rgba(0, 0, 0, 0.45)
 			&:hover
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 2px 1px rgba(0, 0, 0, 0.65)
-				background-color: darken($accent, 5%)
+				box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5)
+				background-color: darken($accent, 2%)
 
 

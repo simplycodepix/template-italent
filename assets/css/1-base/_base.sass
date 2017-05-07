@@ -38,6 +38,11 @@ body.boxed_layout::-webkit-scrollbar-track
 
 /* PAGE PRELOADER STYLES START */
 
+.home .rtp_preloader
+	background-color: $spinner_bg
+.home .spinner > div
+	background-color: $spinner_color
+
 .rtp_preloader
 	position: fixed
 	top: 0
@@ -60,7 +65,7 @@ body.boxed_layout::-webkit-scrollbar-track
 .spinner > div 
  width: 25px
  height: 25px
- background-color: $accent
+ background-color: $white
  border-radius: 100%
  display: inline-block
 
@@ -160,7 +165,7 @@ ul.rtp_social
 			color: #fff
 			margin: 0 5px
 			font-size: 16px
-			border-radius: 50%
+			border-radius: $border_radius_social
 			border: 1px solid $black
 			+transition(300ms, ease-in-out)
 			&:hover
@@ -173,7 +178,7 @@ ul.rtp_social
 	display: inline-block
 	padding: 0.9em 2.5em
 	color: $white
-	border-radius: 2px
+	border-radius: $border_radius
 	text-transform: uppercase
 	margin: 40px 0 0
 	background-color: $accent

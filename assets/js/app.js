@@ -23,7 +23,7 @@ $(document).ready(function(){
   /******************************/
   
   $('.off_show__screen').on("click", function () {
-      $('.off_show__screen').toggleClass('nav_opened');
+      $('.off_show__screen, header.rtp_header').toggleClass('nav_opened');
       if ( $('body').hasClass('home') ) {
         $('.page_wrapper').toggleClass('show_off');
         $('body').toggleClass('show_off__hidden');
